@@ -14,21 +14,21 @@ public class Paquete {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_paquete")
-	Integer id;
+	private Integer id;
 	
-	String nombre;
+	private String nombre;
 	
-	String descripcion;
+	private String descripcion;
 
-	Double precio;
+	private Double precio;
 	
-	String destino;
+	private String destino;
 	
-	Integer hotel_id;
+	private Integer hotel_id;
 	
-	Integer vuelos_id;
+	private Integer vuelos_id;
 	
-	Integer actividades_id;
+	private Integer actividades_id;
 	
 
 
