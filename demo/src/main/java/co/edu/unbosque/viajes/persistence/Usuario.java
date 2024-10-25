@@ -23,6 +23,9 @@ public class Usuario {
 	
 	@Column(columnDefinition = "VARCHAR(50)")
 	private String correo;
+	
+	@Column(columnDefinition = "VARCHAR(50)")
+	private String contraseña;
 
 	public Integer getId() {
 		return id;
@@ -54,5 +57,13 @@ public class Usuario {
 
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 }
