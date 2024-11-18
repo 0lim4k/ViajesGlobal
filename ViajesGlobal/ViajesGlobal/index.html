@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViajesGlobal - Agencia de Viajes</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - enlace CSS personalizado
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - fuente de Google
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<body id="top">
+
+  <!-- 
+    - CABECERA
+  -->
+
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+        <a href="tel:+01123456790" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">Para consultas adicionales:</p>
+            <p class="helpline-number">+57 3044210273</p>
+          </div>
+        </a>
+
+        <a href="#" class="h2" style="color: white;">ViajesGlobal</a>
+
+        
+
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Buscar">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <button class="nav-open-btn" aria-label="Abrir menú" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Logo de ViajesGlobal">
+            </a>
+            <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Inicio</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="#destination" class="navbar-link" data-nav-link>Destinos</a>
+            </li>
+            <li>
+              <a href="#package" class="navbar-link" data-nav-link>Paquetes</a>
+            </li>
+            <li>
+              <a href="#gallery" class="navbar-link" data-nav-link>Galería</a>
+            </li>
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>Contáctanos</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn btn-primary">Reserva ahora</button>
+        <button class="btn btn-primary" id="form-open">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Formularios de login y registro -->
+  <section class="home">
+    <div class="form_container">
+      <i class="uil uil-times form_close"></i>
+  
+      <!-- Login -->
+      <div class="form login_form">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Ingresa tu email" required>
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Ingresa tu contraseña" required>
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="remember">
+              <label for="remember">Recordarme</label>
+            </span>
+            <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit" class="button">Iniciar Sesión</button>
+          <p class="login_signup">¿No tienes cuenta? <a href="#" id="signup">Registrarse</a></p>
+        </form>
+      </div>
+  
+      <!-- Registro -->
+      <div class="form signup_form">
+        <form action="#">
+          <h2>Registro</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Ingresa tu email" required>
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Ingresa tu contraseña" required>
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Confirmar contraseña" required>
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <button type="submit" class="button">Registrarse</button>
+          <p class="login_signup">¿Tienes una cuenta? <a href="#" id="login">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <script src="./assets/js/script.js"></script>
+
+
+  
+
+  <main>
+    <article>
+
+      <!-- 
+        - HÉROE
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+          <h2 class="h1 hero-title">Descubre el mundo con ViajesGlobal</h2>
+          <p class="hero-text">
+            Vive experiencias inolvidables con nuestros paquetes diseñados para explorar los destinos más emocionantes.
+          </p>
+
+          <div class="btn-group">
+            <button class="btn btn-primary">Saber más</button>
+            <button class="btn btn-secondary">Reservar ahora</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - FORMULARIO DE BÚSQUEDA DE TOURS
+      -->
+
+      <section class="tour-search">
+        <div class="container">
+          <form action="" class="tour-search-form">
+            <div class="input-wrapper">
+              <label for="destination" class="input-label">Destino*</label>
+              <input type="text" name="destination" id="destination" required placeholder="Ingresa el destino"
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="people" class="input-label">Número de personas*</label>
+              <input type="number" name="people" id="people" required placeholder="Cantidad de personas"
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkin" class="input-label">Fecha de entrada*</label>
+              <input type="date" name="checkin" id="checkin" required class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkout" class="input-label">Fecha de salida*</label>
+              <input type="date" name="checkout" id="checkout" required class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Consultar ahora</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- 
+  - #DESTINOS POPULARES
+-->
+
+<section class="popular" id="destination">
+  <div class="container">
+
+    <p class="section-subtitle">Descubre lugares</p>
+
+    <h2 class="h2 section-title">Destinos populares</h2>
+
+    <p class="section-text">
+      Explora destinos increíbles que te dejarán sin aliento. Planifica tu próxima aventura con nosotros.
+    </p>
+
+    <ul class="popular-list">
+
+      <li>
+        <div class="popular-card">
+
+          <figure class="card-img">
+            <img src="./assets/images/popular-1.jpg" alt="San Miguel, Italia" loading="lazy">
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+
+            <p class="card-subtitle">
+              <a href="#">Italia</a>
+            </p>
+
+            <h3 class="h3 card-title">
+              <a href="#">San Miguel</a>
+            </h3>
+
+            <p class="card-text">
+              Descubre la belleza de San Miguel con paisajes únicos y cultura inolvidable.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="popular-card">
+
+          <figure class="card-img">
+            <img src="./assets/images/popular-2.jpg" alt="Burj Khalifa, Dubái" loading="lazy">
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+
+            <p class="card-subtitle">
+              <a href="#">Dubái</a>
+            </p>
+
+            <h3 class="h3 card-title">
+              <a href="#">Burj Khalifa</a>
+            </h3>
+
+            <p class="card-text">
+              Vive la experiencia de visitar el edificio más alto del mundo en el corazón de Dubái.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="popular-card">
+
+          <figure class="card-img">
+            <img src="./assets/images/popular-3.jpg" alt="Templo de Kioto, Japón" loading="lazy">
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+
+            <p class="card-subtitle">
+              <a href="#">Japón</a>
+            </p>
+
+            <h3 class="h3 card-title">
+              <a href="#">Templo de Kioto</a>
+            </h3>
+
+            <p class="card-text">
+              Explora el encanto tradicional de Kioto y su arquitectura impresionante.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+
+    <button class="btn btn-primary">Ver más destinos</button>
+
+  </div>
+</section>
+
+<!-- 
+  - #PAQUETES
+-->
+
+<section class="package" id="package">
+  <div class="container">
+
+    <p class="section-subtitle">Paquetes populares</p>
+
+    <h2 class="h2 section-title">Descubre nuestros paquetes</h2>
+
+    <p class="section-text">
+      Encuentra el paquete perfecto para tus vacaciones y vive experiencias inolvidables.
+    </p>
+
+    <ul class="package-list">
+
+      <li>
+        <div class="package-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/packege-1.jpg" alt="Vacaciones en la playa" loading="lazy">
+          </figure>
+
+          <div class="card-content">
+
+            <h3 class="h3 card-title">Vacaciones en la playa</h3>
+
+            <p class="card-text">
+              Relájate bajo el sol en las playas más hermosas del mundo.
+            </p>
+
+            <ul class="card-meta-list">
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="time"></ion-icon>
+      
+                  <p class="text">Duración: 7 días / 6 noches</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="people"></ion-icon>
+      
+                  <p class="text">Capacidad máxima: 10 personas</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="location"></ion-icon>
+      
+                  <p class="text">Ubicación: Malasia</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="fitness"></ion-icon>
+      
+                  <p class="text">Nivel de actividad: Moderado</p>
+                </div>
+              </li>
+      
+            </ul>
+
+          </div>
+
+          <div class="card-price">
+            <div class="wrapper">
+              <p class="reviews">(25 reseñas)</p>
+              <div class="card-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </div>
+
+            <p class="price">
+              $750
+              <span>/ por persona</span>
+            </p>
+            <ul class="additional-info">
+              <li>Incluye alojamiento en cabañas eco-amigables.</li>
+              <li>Comidas tradicionales preparadas por chefs locales.</li>
+              <li>Excursiones guiadas y actividades recreativas.</li>
+              <li>Transporte desde el aeropuerto al hotel.</li>
+            </ul>
+
+            <button class="btn btn-secondary">Reservar ahora</button>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="package-card">
+      
+          <figure class="card-banner">
+            <img src="./assets/images/packege-2.jpg" alt="Vacaciones de verano en el río Oxolotan" loading="lazy">
+          </figure>
+      
+          <div class="card-content">
+      
+            <h3 class="h3 card-title">Vacaciones de verano en el río Oxolotan</h3>
+      
+            <p class="card-text">
+              Explora el mágico río Oxolotan con nuestra experiencia única de verano. Disfruta de paisajes impresionantes, 
+              actividades al aire libre y la rica cultura local. Ideal para desconectarte y vivir aventuras inolvidables.
+            </p>
+      
+            <ul class="card-meta-list">
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="time"></ion-icon>
+      
+                  <p class="text">Duración: 7 días / 6 noches</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="people"></ion-icon>
+      
+                  <p class="text">Capacidad máxima: 10 personas</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="location"></ion-icon>
+      
+                  <p class="text">Ubicación: Malasia</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="fitness"></ion-icon>
+      
+                  <p class="text">Nivel de actividad: Moderado</p>
+                </div>
+              </li>
+      
+            </ul>
+      
+          </div>
+      
+          <div class="card-price">
+      
+            <div class="wrapper">
+      
+              <p class="reviews">(20 opiniones)</p>
+      
+              <div class="card-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+      
+            </div>
+      
+            <p class="price">
+              $520
+              <span>/ por persona</span>
+            </p>
+      
+            <ul class="additional-info">
+              <li>Incluye alojamiento en cabañas eco-amigables.</li>
+              <li>Comidas tradicionales preparadas por chefs locales.</li>
+              <li>Excursiones guiadas y actividades recreativas.</li>
+              <li>Transporte desde el aeropuerto al hotel.</li>
+            </ul>
+      
+            <button class="btn btn-secondary">Reservar ahora</button>
+      
+          </div>
+      
+        </div>
+      </li>
+
+      <li>
+        <div class="package-card">
+      
+          <figure class="card-banner">
+            <img src="./assets/images/packege-3.jpg" alt="Vacaciones de fin de semana en la isla de Santorini" loading="lazy">
+          </figure>
+      
+          <div class="card-content">
+      
+            <h3 class="h3 card-title">Vacaciones de fin de semana en la isla de Santorini</h3>
+      
+            <p class="card-text">
+              Vive la magia de Santorini con vistas espectaculares al mar Egeo, playas de arena blanca y una atmósfera romántica. 
+              Ideal para escapadas rápidas llenas de lujo, relajación y cultura griega.
+            </p>
+      
+            <ul class="card-meta-list">
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="time"></ion-icon>
+      
+                  <p class="text">Duración: 3 días / 2 noches</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="people"></ion-icon>
+      
+                  <p class="text">Capacidad máxima: 10 personas</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="location"></ion-icon>
+      
+                  <p class="text">Ubicación: Santorini, Grecia</p>
+                </div>
+              </li>
+      
+              <li class="card-meta-item">
+                <div class="meta-box">
+                  <ion-icon name="sunny"></ion-icon>
+      
+                  <p class="text">Clima: Soleado</p>
+                </div>
+              </li>
+      
+            </ul>
+      
+          </div>
+      
+          <div class="card-price">
+      
+            <div class="wrapper">
+      
+              <p class="reviews">(40 opiniones)</p>
+      
+              <div class="card-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+      
+            </div>
+      
+            <p class="price">
+              $660
+              <span>/ por persona</span>
+            </p>
+      
+            <ul class="additional-info">
+              <li>Incluye alojamiento en hoteles boutique con vistas al mar.</li>
+              <li>Desayunos gourmet con especialidades locales.</li>
+              <li>Recorridos guiados por Oia y Fira.</li>
+              <li>Transporte privado desde el aeropuerto.</li>
+            </ul>
+      
+            <button class="btn btn-secondary">Reservar ahora</button>
+      
+          </div>
+      
+        </div>
+      </li>
+      
+      
+
+    </ul>
+
+    <button class="btn btn-primary">Ver todos los paquetes</button>
+
+  </div>
+</section>
+
+<!-- 
+        - #GALERÍA
+      -->
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+      
+          <p class="section-subtitle">Galería de Fotos</p>
+      
+          <h2 class="h2 section-title">Momentos Capturados por Viajeros</h2>
+      
+          <p class="section-text">
+            Explora los recuerdos más destacados de nuestros aventureros. Desde paisajes asombrosos hasta momentos únicos, 
+            cada fotografía cuenta una historia de exploración, alegría y descubrimiento. ¡Únete y crea tus propios recuerdos!
+          </p>
+      
+          <ul class="gallery-list">
+      
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-1.jpg" alt="Explorando el río Oxolotan bajo un cielo despejado">
+                <figcaption>Río Oxolotan - Naturaleza en su máximo esplendor</figcaption>
+              </figure>
+            </li>
+      
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-2.jpg" alt="Caminando por las playas de Santorini al atardecer">
+                <figcaption>Playas de Santorini - Atardecer inolvidable</figcaption>
+              </figure>
+            </li>
+      
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-3.jpg" alt="Montañas cubiertas de nieve en una fría mañana">
+                <figcaption>Montañas nevadas - Un paraíso invernal</figcaption>
+              </figure>
+            </li>
+      
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-4.jpg" alt="Callejón colorido en un mercado de Malasia">
+                <figcaption>Mercado de Malasia - Colores y tradición</figcaption>
+              </figure>
+            </li>
+      
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-5.jpg" alt="Vista panorámica de un bosque tropical">
+                <figcaption>Selva tropical - La serenidad de la naturaleza</figcaption>
+              </figure>
+            </li>
+      
+          </ul>
+      
+        </div>
+      </section>
+
+      <!-- 
+        - #CTA
+      -->
+
+<section class="cta" id="contact">
+  <div class="container">
+
+    <div class="cta-content">
+      <p class="section-subtitle">¡Llamado a la Acción!</p>
+
+      <h2 class="h2 section-title">¿Listo para un viaje inolvidable? ¡Piénsanos siempre!</h2>
+
+      <p class="section-text">
+        Prepárate para explorar destinos asombrosos y vivir experiencias únicas. No importa dónde quieras ir, estamos aquí 
+        para hacer que tu viaje sea increíblemente especial. ¡Contáctanos y comienza a planificar la aventura de tu vida!
+      </p>
+    </div>
+
+    <div class="cta-actions">
+      <button class="btn btn-primary">Reserva Ahora</button>
+      <button class="btn btn-secondary">Contáctanos</button>
+    </div>
+
+  </div>
+</section>
+
+</article>
+</main>
+
+
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+  
+        <!-- Marca -->
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <a href="#" class="h2" style="color: var(--white);">ViajesGlobal</a>
+          </a>
+          <p class="footer-text">
+            Planea tu próxima aventura con nosotros. Ofrecemos los mejores paquetes para crear recuerdos inolvidables.
+          </p>
+        </div>
+  
+        <!-- Contacto -->
+        <div class="footer-contact">
+          <h4 class="contact-title">Contáctanos</h4>
+          <p class="contact-text">
+            Estamos aquí para ayudarte a planificar el viaje de tus sueños.
+          </p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+573004567890" class="contact-link">+57 (300) 456-7890</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@viajesglobal.com" class="contact-link">info@viajesglobal.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>Carrera 10 #23-45, Bogotá, Colombia</address>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Formulario de Newsletter -->
+        <div class="footer-form">
+          <p class="form-text">
+            ¡Suscríbete a nuestro boletín y recibe ofertas exclusivas y noticias!
+          </p>
+          <form action="" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Ingresa tu correo electrónico" required>
+            <button type="submit" class="btn btn-primary">Suscribirse</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Sección Inferior -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 <a href="#" style="color: var(--bright-navy-blue);">ViajesGlobal</a>. Todos los derechos reservados.
+        </p>
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="#" class="footer-bottom-link">Política de privacidad</a>
+          </li>
+          <li>
+            <a href="#" class="footer-bottom-link">Términos y condiciones</a>
+          </li>
+          <li>
+            <a href="#" class="footer-bottom-link">Preguntas frecuentes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  </footer>
+  
+</body>
+
+
+
+</html>
